@@ -78,9 +78,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.6415094, g: 0.3150369, b: 0, a: 1}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: -1890460679411318295, guid: 21439e625342b8342983ac34b97aa14b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -165,3 +165,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0108203642e62844b53d80db877bb6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood: {fileID: 4873239203157256819, guid: 3dcfc8925328d6143879a2d2c474c78d, type: 3}
