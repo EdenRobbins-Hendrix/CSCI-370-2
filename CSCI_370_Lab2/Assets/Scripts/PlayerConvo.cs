@@ -18,14 +18,14 @@ public class PlayerConvo : MonoBehaviour
 
     void Interact() {
         if (inConversation) {
-        //    GameManager.Instance.SkipLine();
+            GameManager.main.SkipLine();
         }
         else {
             RaycastHit2D hit = Physics2D.CircleCast(transform.position, talkDistance, Vector2.up, 0, LayerMask.GetMask("NPC"));
             if (hit){
                 if (hit.collider.gameObject.TryGetComponent(out NPC npc))
                 {
-                    //GameManager.Instance.StartDialogue(npc.dialogueAsset.dialogue, npc.StartPosition, npc.npcName);
+                    GameManager.main.StartDialogue(npc.dialogueAsset.dialogue, npc.StartPosition, npc.npcName);
 
                 }
             } 
