@@ -18,7 +18,9 @@ public class GameManager : MonoBehaviour
     bool skipLineTriggered;
     public float charactersPerSec = 90;
 
-    int money = 0;
+    public int money = 20;
+    int health = 100;
+    public TextMeshProUGUI healthText;
     public TextMeshProUGUI moneyText;
 
     private void Awake() {
@@ -40,6 +42,16 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void IncScore(int ds){
+        money += ds;
+        moneyText.text = "Money: " + money;
+    }
+
+    public void IncHealth (int dh){
+        health -= dh;
+        healthText.text = "Health: " + health;
     }
 
     public void StartDialogue(String[] dialogue, int StartPosition, string name) {

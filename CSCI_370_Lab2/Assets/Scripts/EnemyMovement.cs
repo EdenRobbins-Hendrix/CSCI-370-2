@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
+using System;
+using System.Collections;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -26,6 +28,7 @@ public class EnemyMovement : MonoBehaviour
             if (pathIndex == GameManager.main.path.Length){
                 ZombieSpawner.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
+                GameManager.main.IncHealth(10);
                 return;
         } else {
             target = GameManager.main.path[pathIndex];

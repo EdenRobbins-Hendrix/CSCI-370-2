@@ -1,5 +1,6 @@
 using UnityEngine;
-
+using System;
+using System.Collections;
 public class CoffeeBean : MonoBehaviour
 {
 
@@ -9,6 +10,7 @@ public class CoffeeBean : MonoBehaviour
         {
             Destroy(other.gameObject); 
             Destroy(gameObject); 
+            GameManager.main.IncScore(10);
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
