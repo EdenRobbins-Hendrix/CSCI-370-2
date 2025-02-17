@@ -1,33 +1,78 @@
 using UnityEngine;
+using UnityEngine.Events;
+using System.Collections;
+using System.Collections.Generic;
 
 public class ZombieSpawner : MonoBehaviour {
 
     [Header("Attributes")]
     [SerializeField] private int baseEnemies = 8;
-    [SerializeField] private float enemiesPerSecond = 0.5f;
+    [SerializeField] private float enemiesPerSecond = 1f;
+    [SerializeField] private float timeBetweenWaves = 5f;
 
-    [Header("References")]
-    [SerializeField] private GameObject[] enemyPrefabs;
+ 
+ 
+    public static UnityEvent onEnemyDestroy = new UnityEvent();
+
+    private void Awake() {
+        onEnemyDestroy.AddListener(EnemyDestroyed);
+    }
+
 
     private int currentwave = 1;
     private float timeSinceLastSpawn;
     private int enemiesAlive;
-    private int enemiesLeftToSpawn = 10;
+    private int enemiesLeftToSpawn;
     private bool isSpawning = false;
 
 
     public GameObject BasicZombie;
 
     void Start() {
-        InvokeRepeating("SpawnZombies", 1.5f, 3.0f);
+        StartCoroutine(StartWave());
+    }
+
+    private IEnumerator StartWave() {
+        yield return new WaitForSeconds(timeBetweenWaves);
+        isSpawning = true;
+        enemiesLeftToSpawn = EnemiesPerWave();
+    }
+
+    private int EnemiesPerWave() {
+        return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentwave, 0.75f));
+    }
+
+    private void EnemyDestroyed() {
+        enemiesAlive--;
     }
 
 
     void Update() {
+        if (!isSpawning) return;
+
+        timeSinceLastSpawn += Time.deltaTime;
+
+        if (timeSinceLastSpawn >= (1f / enemiesPerSecond) && enemiesLeftToSpawn > 0) {
+            SpawnZombies();
+            enemiesLeftToSpawn--;
+            enemiesAlive++;
+            timeSinceLastSpawn = 0f;
+        }
+
+        if (enemiesAlive == 0 && enemiesLeftToSpawn == 0){
+            EndWave();
+        }
     }
 
-    void SpawnZombies() {
-            Instantiate(BasicZombie);
+    private void EndWave() {
+        isSpawning = false;
+        timeSinceLastSpawn = 0f;
+        currentwave++;
+        StartCoroutine(StartWave());
+    }
+
+    private void SpawnZombies() {
+            Instantiate(BasicZombie, GameManager.main.startpoint.position, Quaternion.identity);
     }
 
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     [Header("Attributes")]
-    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float moveSpeed = 3f;
 
     private Transform target;
     private int pathIndex = 0;
@@ -23,6 +24,7 @@ public class EnemyMovement : MonoBehaviour
             pathIndex++;
 
             if (pathIndex == GameManager.main.path.Length){
+                ZombieSpawner.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
                 return;
         } else {

@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI moneyText;
 
     private void Awake() {
-        if (main = null) {
+        if (main == null) {
             main = this;
             DontDestroyOnLoad(gameObject);
         }
