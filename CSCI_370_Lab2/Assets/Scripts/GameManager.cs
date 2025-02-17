@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     bool skipLineTriggered;
     public float charactersPerSec = 90;
 
+    int money = 0;
+    public TextMeshProUGUI moneyText;
+
     private void Awake() {
         if (main = null) {
             main = this;
@@ -38,6 +41,7 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
     public void StartDialogue(String[] dialogue, int StartPosition, string name) {
         nameText.text = name + "...";
         dialoguePanel.SetActive(true);
