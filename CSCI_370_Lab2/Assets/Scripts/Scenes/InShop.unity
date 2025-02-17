@@ -130,7 +130,8 @@ GameObject:
   - component: {fileID: 371715258}
   - component: {fileID: 371715257}
   - component: {fileID: 371715256}
-  m_Layer: 0
+  - component: {fileID: 371715259}
+  m_Layer: 3
   m_Name: tile_0100_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,6 +254,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &371715259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371715255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa15cf516484ea478549bd56ea097f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstInteraction: 1
+  repeatStartPosition: 0
+  npcName: Test2
+  dialogueAsset: {fileID: 11400000, guid: 34caa9bcf14250242ba9c4acc00adbe8, type: 2}
+--- !u!1 &495473957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 495473958}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &495473958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495473957}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &754495626
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +404,8 @@ GameObject:
   - component: {fileID: 773565726}
   - component: {fileID: 773565725}
   - component: {fileID: 773565724}
-  m_Layer: 0
+  - component: {fileID: 773565727}
+  m_Layer: 3
   m_Name: tile_0085_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,6 +528,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &773565727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773565723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa15cf516484ea478549bd56ea097f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstInteraction: 1
+  repeatStartPosition: 0
+  npcName: Test1
+  dialogueAsset: {fileID: 11400000, guid: 4c0c53c8370bb7841b5ded331b98f753, type: 2}
 --- !u!1 &1287144254
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,3 +728,4 @@ SceneRoots:
   - {fileID: 1287144258}
   - {fileID: 773565726}
   - {fileID: 371715258}
+  - {fileID: 495473958}
