@@ -39,9 +39,9 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        moneyText.text = "Money: " + money;
-        healthText.text = "Health: " + health;
-        beanText.text = "Beans: " + coffeeBeans;
+        // moneyText.text = "Money: " + money;
+        // healthText.text = "Health: " + health;
+        // beanText.text = "Beans: " + coffeeBeans;
     }
 
     // Update is called once per frame
