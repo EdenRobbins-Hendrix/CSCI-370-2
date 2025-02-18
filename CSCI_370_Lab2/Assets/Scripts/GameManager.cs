@@ -20,8 +20,10 @@ public class GameManager : MonoBehaviour
 
     public int money = 20;
     int health = 100;
+    int coffeeBeans = 25;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI beanText;
     int day = 0;
 
     private void Awake() {
@@ -61,6 +63,13 @@ public class GameManager : MonoBehaviour
     public void IncHealth (int dh){
         health -= dh;
         healthText.text = "Health: " + health;
+    }
+
+    public void IncBeans (int db) {
+        coffeeBeans += db;
+        if (!beanText.IsUnityNull()) {
+            beanText.text = "Beans: " + coffeeBeans;
+        }
     }
 
     public void StartDialogue(String[] dialogue, int StartPosition, string name) {
