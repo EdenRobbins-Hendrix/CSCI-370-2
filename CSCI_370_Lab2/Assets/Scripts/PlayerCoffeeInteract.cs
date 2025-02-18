@@ -1,4 +1,3 @@
-using Unity.Multiplayer.Center.Common.Analytics;
 using UnityEngine;
 
 public class PlayerCoffeeInteract : MonoBehaviour
@@ -14,18 +13,24 @@ public class PlayerCoffeeInteract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.KeypadEnter)){
+        if (Input.GetKeyDown(KeyCode.B)){
             Interact();
         }
     }
 
     void Interact() {
         RaycastHit2D hit = Physics2D.CircleCast(transform.position, interactDistance, Vector2.up, 0, LayerMask.GetMask("NPC"));
+        Debug.Log("Sending signal");
             if (hit){
-                if (hit.collider.gameObject.CompareTag("CoffeeMachine"))
+
+            Debug.Log("Signal received");
+                if (hit.collider.gameObject == coffeeMachine)
+                
                 {
+                    Debug.Log("Coffeetime!");
+                    if (GameManager.main.money > 0){
                     GameManager.main.IncBeans(1);
-                    GameManager.main.IncScore(-1);
+                    GameManager.main.IncScore(-1);}
 
                 }
             } 

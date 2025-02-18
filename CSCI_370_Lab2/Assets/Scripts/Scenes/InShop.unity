@@ -6969,7 +6969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d855d0b3d51daf498b4bce004d58681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talkDistance: 2
+  talkDistance: 1.5
   inConversation: 0
 --- !u!114 &1287144261
 MonoBehaviour:
@@ -6983,8 +6983,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a6061410eb9d5439f0a2ba4ec80b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 2
-  coffeeMachine: {fileID: 0}
+  interactDistance: 1.5
+  coffeeMachine: {fileID: 1002974151}
 --- !u!1 &1309634268
 GameObject:
   m_ObjectHideFlags: 0
