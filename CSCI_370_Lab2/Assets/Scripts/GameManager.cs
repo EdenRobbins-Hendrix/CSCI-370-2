@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     int health = 100;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI moneyText;
+    int day = 0;
 
     private void Awake() {
         if (main == null) {
@@ -42,6 +43,14 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void incrementDay(){
+        day++;
     }
 
     public void IncScore(int ds){
