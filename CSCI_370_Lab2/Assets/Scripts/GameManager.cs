@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     public int money = 20;
     int health = 100;
-    int coffeeBeans = 25;
+    public int coffeeBeans = 25;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI beanText;
@@ -38,14 +39,16 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        moneyText.text = "Money: " + money;
+        healthText.text = "Health: " + health;
+        beanText.text = "Beans: " + coffeeBeans;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update(){
+
     }
+
 
     public int getDay() {
         return day;
@@ -53,6 +56,11 @@ public class GameManager : MonoBehaviour
 
     public void incrementDay(){
         day++;
+    }
+
+    public void ReactToClick() {
+        Debug.Log("I've been clicked");
+        Initiate.Fade("TowerDefense", Color.black, 1.0f);
     }
 
     public void IncScore(int ds){

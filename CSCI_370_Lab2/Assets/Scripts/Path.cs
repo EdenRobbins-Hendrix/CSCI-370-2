@@ -18,11 +18,11 @@ public class Path : MonoBehaviour
     }
 
     private void OnMouseDown() {
-        if (tower != null || GameManager.main.money < 10) return;
+        if (tower != null || GameManager.main.coffeeBeans == 0) return;
 
         GameObject towerToBuild = BuildManager.main.GetSelectedTower();
         tower = Instantiate (towerToBuild, transform.position, Quaternion.identity);
-        GameManager.main.IncScore(-10);
+        GameManager.main.IncBeans(-1);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
