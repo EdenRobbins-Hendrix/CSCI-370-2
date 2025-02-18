@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerConvo : MonoBehaviour
 {
     [SerializeField] float talkDistance = 2;
-    bool inConversation;
+    public bool inConversation;
     
 
     // Update is called once per frame
@@ -30,5 +30,27 @@ public class PlayerConvo : MonoBehaviour
                 }
             } 
         }
+    }
+
+    void JoinConversation()
+    {
+        inConversation = true;
+    }
+
+    void LeaveConversation()
+    {
+        inConversation = false;
+    }
+
+    private void OnEnable()
+    {
+        GameManager.OnDialogueStarted += JoinConversation;
+        GameManager.OnDialogueEnded += LeaveConversation;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnDialogueStarted -= JoinConversation;
+        GameManager.OnDialogueEnded -= LeaveConversation;
     }
 }

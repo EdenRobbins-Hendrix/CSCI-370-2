@@ -92,6 +92,20 @@ public class GameManager : MonoBehaviour
         skipLineTriggered = true;
     }
 
+    public void ShowDialogue(string dialogue, string name)
+    {
+        nameText.text = name + "...";
+        StartCoroutine(TypeTextUncapped(dialogue));
+        dialoguePanel.SetActive(true);
+    }
+
+    public void EndDialogue()
+    {
+        nameText.text = null;
+        dialogueText.text = null;
+        dialoguePanel.SetActive(false);
+    }
+
     IEnumerator TypeTextUncapped(string text) {
         float timer = 0;
         float interval = 1 / charactersPerSec;
@@ -112,5 +126,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
 
 }
