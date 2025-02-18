@@ -24,7 +24,8 @@ public class PlayerCoffeeInteract : MonoBehaviour
             if (hit){
                 if (hit.collider.gameObject.CompareTag("CoffeeMachine"))
                 {
-                    
+                    GameManager.main.IncBeans(1);
+                    GameManager.main.IncScore(-1);
 
                 }
             } 

@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - Press enter by the coffee maker to get more beans!
+  - One bean per one money.
+  - Additionally, press enter by the door to start the next day!

@@ -6016,8 +6016,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstInteraction: 1
   repeatStartPosition: 0
-  npcName: Test2
+  npcName: Mysterious Old Man
   dialogueAsset: {fileID: 11400000, guid: 34caa9bcf14250242ba9c4acc00adbe8, type: 2}
+  dialogueAsset2: {fileID: 11400000, guid: 34caa9bcf14250242ba9c4acc00adbe8, type: 2}
+  dialogueAsset3: {fileID: 11400000, guid: 34caa9bcf14250242ba9c4acc00adbe8, type: 2}
 --- !u!1 &495473957
 GameObject:
   m_ObjectHideFlags: 0
@@ -6437,8 +6439,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstInteraction: 1
   repeatStartPosition: 0
-  npcName: Test1
+  npcName: Villager
   dialogueAsset: {fileID: 11400000, guid: 4c0c53c8370bb7841b5ded331b98f753, type: 2}
+  dialogueAsset2: {fileID: 11400000, guid: 4e2bf42b4b02a4845ad4c1377d6787ca, type: 2}
+  dialogueAsset3: {fileID: 11400000, guid: c56ea4138429f96498c7de728c20ecfe, type: 2}
 --- !u!1 &979806226
 GameObject:
   m_ObjectHideFlags: 0
@@ -7985,7 +7989,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -612.1867, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

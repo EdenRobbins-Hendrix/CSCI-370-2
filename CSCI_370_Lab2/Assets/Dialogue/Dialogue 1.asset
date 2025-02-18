@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 214215b7d16d3f046879764eb5b74887, type: 3}
-  m_Name: Test1
+  m_Name: Dialogue 1
   m_EditorClassIdentifier: 
   dialogue:
-  - Thank you so much for taking us in!
-  - I don't know what we would do without you,
+  - Witches really get a bad rap, don't they.
