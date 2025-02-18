@@ -4999,9 +4999,11 @@ MonoBehaviour:
   nameText: {fileID: 0}
   dialoguePanel: {fileID: 0}
   charactersPerSec: 90
+  Canvas: {fileID: 0}
+  Button: {fileID: 0}
   money: 20
   health: 100
-  coffeeBeans: 25
+  coffeeBeans: 20
   healthText: {fileID: 855684214}
   moneyText: {fileID: 1859536798}
   beanText: {fileID: 1461599588}

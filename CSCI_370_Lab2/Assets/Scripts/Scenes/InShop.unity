@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 291, y: 180}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 291, y: 179.5}
+  m_SizeDelta: {x: 200, y: 51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &56779835
 MonoBehaviour:
@@ -6070,7 +6070,11 @@ MonoBehaviour:
   nameText: {fileID: 1912290249}
   dialoguePanel: {fileID: 1438807030}
   charactersPerSec: 90
+  Canvas: {fileID: 0}
+  Button: {fileID: 0}
   money: 20
+  health: 100
+  coffeeBeans: 20
   healthText: {fileID: 0}
   moneyText: {fileID: 272769679}
   beanText: {fileID: 56779835}
