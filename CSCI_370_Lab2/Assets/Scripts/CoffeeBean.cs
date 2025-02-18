@@ -12,6 +12,7 @@ public class CoffeeBean : MonoBehaviour
         {
             Destroy(other.gameObject); 
             Destroy(gameObject); 
+            ZombieSpawner.onEnemyDestroy.Invoke();
             GameManager.main.IncScore(10);
             GameObject go = Instantiate(blood);
             go.transform.position = transform.position;

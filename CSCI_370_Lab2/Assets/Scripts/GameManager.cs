@@ -19,8 +19,10 @@ public class GameManager : MonoBehaviour
     bool skipLineTriggered;
     public float charactersPerSec = 90;
 
+    public GameObject Canvas;
+    public GameObject Button;
     public int money = 20;
-    int health = 100;
+    public int health = 100;
     public int coffeeBeans = 25;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI moneyText;
@@ -39,14 +41,25 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // moneyText.text = "Money: " + money;
-        // healthText.text = "Health: " + health;
-        // beanText.text = "Beans: " + coffeeBeans;
+        moneyText.text = "Money: " + money;
+        healthText.text = "Health: " + health;
+        beanText.text = "Beans: " + coffeeBeans;
     }
 
-    // Update is called once per frame
     void Update(){
 
+    }
+
+    public void changeSceneInShop(){
+        Initiate.Fade("InShop", Color.black, 1.0f);
+    }
+
+    public void resetGame(){
+        money = 20;
+        health = 100;
+        coffeeBeans = 25;
+        day = 0;
+        Initiate.Fade("TitleScreen", Color.black, 1.0f);
     }
 
 

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class ZombieSpawner : MonoBehaviour {
 
@@ -38,6 +39,11 @@ public class ZombieSpawner : MonoBehaviour {
         enemiesLeftToSpawn = EnemiesPerWave();
     }
 
+    public void GameOver(){
+        GameManager.main.resetGame();
+        currentwave = 1;
+    }
+
     private int EnemiesPerWave() {
         return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentwave, 0.75f));
     }
@@ -62,6 +68,10 @@ public class ZombieSpawner : MonoBehaviour {
         if (enemiesAlive == 0 && enemiesLeftToSpawn == 0){
             EndWave();
         }
+
+        if (GameManager.main.health <= 0){
+            GameOver();
+        }
     }
 
     private void EndWave() {
@@ -69,6 +79,10 @@ public class ZombieSpawner : MonoBehaviour {
         timeSinceLastSpawn = 0f;
         currentwave++;
         StartCoroutine(StartWave());
+        GameManager.main.incrementDay();
+        if (GameManager.main.health > 0) {
+            GameManager.main.changeSceneInShop();
+        }
     }
 
     private void SpawnZombies() {

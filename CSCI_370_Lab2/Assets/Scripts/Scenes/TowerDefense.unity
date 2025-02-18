@@ -1097,7 +1097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbca773dfc72a06469a64c95dac45627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseEnemies: 8
+  baseEnemies: 10
   enemiesPerSecond: 1
   timeBetweenWaves: 2.5
   BasicZombie: {fileID: 8914802858812258269, guid: 2505b5ec4425bfe43b20790fc9ba1e0c, type: 3}
@@ -5000,6 +5000,7 @@ MonoBehaviour:
   dialoguePanel: {fileID: 0}
   charactersPerSec: 90
   money: 20
+  health: 100
   coffeeBeans: 25
   healthText: {fileID: 855684214}
   moneyText: {fileID: 1859536798}
