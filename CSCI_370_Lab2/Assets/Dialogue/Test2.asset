@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Test2
   m_EditorClassIdentifier: 
   dialogue:
-  - This is another test.
-  - Testing testing 123
+  - Press enter by the coffee maker to get more beans!
