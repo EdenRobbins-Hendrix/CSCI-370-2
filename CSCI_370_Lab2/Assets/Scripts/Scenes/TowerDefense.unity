@@ -1100,6 +1100,11 @@ MonoBehaviour:
   baseEnemies: 10
   enemiesPerSecond: 1
   timeBetweenWaves: 2.5
+  currentwave: 1
+  timeSinceLastSpawn: 0
+  enemiesAlive: 0
+  enemiesLeftToSpawn: 0
+  isSpawning: 0
   BasicZombie: {fileID: 8914802858812258269, guid: 2505b5ec4425bfe43b20790fc9ba1e0c, type: 3}
 --- !u!1 &519420028
 GameObject:
@@ -5101,10 +5106,11 @@ MonoBehaviour:
   Button: {fileID: 0}
   money: 20
   health: 100
-  coffeeBeans: 20
+  coffeeBeans: 25
   healthText: {fileID: 855684214}
   moneyText: {fileID: 1859536798}
   beanText: {fileID: 1461599588}
+  spawning: 1
 --- !u!4 &994490706
 Transform:
   m_ObjectHideFlags: 0

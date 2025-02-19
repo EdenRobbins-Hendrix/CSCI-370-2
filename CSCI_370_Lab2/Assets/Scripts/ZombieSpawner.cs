@@ -19,15 +19,50 @@ public class ZombieSpawner : MonoBehaviour {
         onEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
-
-    private int currentwave = 1;
-    private float timeSinceLastSpawn;
-    private int enemiesAlive;
-    private int enemiesLeftToSpawn;
-    private bool isSpawning = false;
+    [Header("WaveInfo")]
+    [SerializeField] private int currentwave = 1;
+    [SerializeField] private float timeSinceLastSpawn;
+    [SerializeField] private int enemiesAlive;
+    [SerializeField] private int enemiesLeftToSpawn;
+    [SerializeField] private bool isSpawning = false;
 
 
     public GameObject BasicZombie;
+
+    void OnEnable() {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable() {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        if (scene.name == "TowerDefense") {
+            GameManager.main.spawning = true;
+            GameManager.main.startpoint = GameObject.Find("StartPoint").transform;
+            GameManager.main.path[0] = GameObject.Find("Point").transform;
+            GameManager.main.path[1] = GameObject.Find("Point (1)").transform;
+            GameManager.main.path[2] = GameObject.Find("Point (2)").transform;
+            GameManager.main.path[3] = GameObject.Find("Point (3)").transform;
+            GameManager.main.path[4] = GameObject.Find("Point (4)").transform;
+            GameManager.main.path[5] = GameObject.Find("Point (5)").transform;
+            GameManager.main.path[6] = GameObject.Find("Point (6)").transform;
+            GameManager.main.path[7] = GameObject.Find("Point (7)").transform;
+            GameManager.main.path[8] = GameObject.Find("Point (8)").transform;
+            GameManager.main.path[9] = GameObject.Find("Point (9)").transform;
+            GameManager.main.path[10] = GameObject.Find("Point (10)").transform;
+            GameManager.main.path[11] = GameObject.Find("Point (11)").transform;
+            GameManager.main.path[12] = GameObject.Find("Point (12)").transform;
+            GameManager.main.path[13] = GameObject.Find("Point (13)").transform;
+            GameManager.main.path[14] = GameObject.Find("Point (14)").transform;
+            GameManager.main.path[15] = GameObject.Find("Point (15)").transform;
+            GameManager.main.path[16] = GameObject.Find("Point (16)").transform;
+            GameManager.main.path[17] = GameObject.Find("Point (17)").transform;
+            GameManager.main.path[18] = GameObject.Find("EndPoint").transform;
+            Start();
+        }
+    }
 
     void Start() {
         StartCoroutine(StartWave());

@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public GameObject Button;
     public int money = 20;
     public int health = 100;
-    public int coffeeBeans = 20;
+    public int coffeeBeans = 25;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI beanText;
