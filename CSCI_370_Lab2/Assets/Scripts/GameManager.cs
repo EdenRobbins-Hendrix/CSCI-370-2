@@ -30,6 +30,10 @@ public class GameManager : MonoBehaviour
     int day = 0;
 
     private void Awake() {
+        moneyText.text = "Money: " + money;
+        if (!healthText.IsUnityNull()){
+        healthText.text = "Health: " + health;}
+        beanText.text = "Beans: " + coffeeBeans;
         if (main == null) {
             main = this;
             DontDestroyOnLoad(gameObject);
@@ -41,9 +45,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        moneyText.text = "Money: " + money;
-        healthText.text = "Health: " + health;
-        beanText.text = "Beans: " + coffeeBeans;
+        
     }
 
     void Update(){
