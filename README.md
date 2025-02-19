@@ -19,7 +19,4 @@ What Eden Did: \
 I designed the overall game concept. Additionally, I sourced the Kenney packs that we used in the final game and made edits to some sprites to fit what we wanted from the project. Furthermore, I made custom music for the game as well as wrote the script. I also made the dialogue system work, as well as implement all mechanics present in the cafe sections (except for the scene transition.) \
 \
 What Andrew Did: \
-Tower defense mechanics implementation \
-Tower defense design \
-Most of the game manager functionality\
-Transitions between scenes
+I implemented the tower defense mechanics, pathing, and design. I also implemented much of the game manager functionality. Additionally, I implemented the scene transitions.
