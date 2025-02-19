@@ -16,12 +16,7 @@ Attributions: "Tiny Town" by Kenney CC0 \
 "Tiny Dungeon" by Kenney CC0 \
 \
 What Eden Did: \
-Game concept \
-Sprite editing \
-Script writing \
-Dialogue functionality \
-Custom background music \
-Cafe mechanics implementation \
+I designed the overall game concept. Additionally, I sourced the Kenney packs that we used in the final game and made edits to some sprites to fit what we wanted from the project. Furthermore, I made custom music for the game as well as wrote the script. I also made the dialogue system work, as well as implement all mechanics present in the cafe sections (except for the scene transition.) \
 \
 What Andrew Did: \
 Tower defense mechanics implementation \
