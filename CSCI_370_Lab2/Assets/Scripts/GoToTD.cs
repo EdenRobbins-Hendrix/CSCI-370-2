@@ -23,7 +23,7 @@ public class GoToTD : MonoBehaviour
                 {
                     Debug.Log("Leaving!");
                     GameManager.main.incrementDay();
-                    Initiate.Fade("TowerDefense", Color.black, 1.0f);
+                    GameManager.main.ReactToClick();
                 }
             } 
     }

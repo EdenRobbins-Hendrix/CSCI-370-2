@@ -1065,7 +1065,7 @@ GameObject:
   - component: {fileID: 502380706}
   m_Layer: 0
   m_Name: StartPoint
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5097,7 +5097,7 @@ MonoBehaviour:
   nameText: {fileID: 0}
   dialoguePanel: {fileID: 0}
   charactersPerSec: 90
-  Canvas: {fileID: 0}
+  Canvas: {fileID: 1426296957}
   Button: {fileID: 0}
   money: 20
   health: 100
@@ -6427,7 +6427,7 @@ GameObject:
   - component: {fileID: 1426296958}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6999,7 +6999,7 @@ GameObject:
   - component: {fileID: 1617543685}
   m_Layer: 0
   m_Name: Paths
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8077,7 +8077,7 @@ GameObject:
   - component: {fileID: 1884114966}
   m_Layer: 0
   m_Name: Directions
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -6782,7 +6782,7 @@ GameObject:
   - component: {fileID: 979806227}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: CoffeeMachine
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6885,7 +6885,7 @@ GameObject:
   - component: {fileID: 1002974154}
   m_Layer: 3
   m_Name: CoffeeMachine
-  m_TagString: Untagged
+  m_TagString: CoffeeMachine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -34,9 +34,10 @@ public class ZombieSpawner : MonoBehaviour {
     }
 
     private IEnumerator StartWave() {
+        if (GameManager.main.spawning){
         yield return new WaitForSeconds(timeBetweenWaves);
         isSpawning = true;
-        enemiesLeftToSpawn = EnemiesPerWave();
+        enemiesLeftToSpawn = EnemiesPerWave();}
     }
 
     public void GameOver(){
@@ -78,8 +79,6 @@ public class ZombieSpawner : MonoBehaviour {
         isSpawning = false;
         timeSinceLastSpawn = 0f;
         currentwave++;
-        StartCoroutine(StartWave());
-        GameManager.main.incrementDay();
         if (GameManager.main.health > 0) {
             GameManager.main.changeSceneInShop();
         }
