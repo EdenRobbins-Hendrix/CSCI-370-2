@@ -6,6 +6,10 @@ TagManager:
   tags:
   - BasicZombie
   - CoffeeMachine
+  - Canvas
+  - DialogueBox
+  - Name
+  - Dialogue
   layers:
   - Default
   - TransparentFX

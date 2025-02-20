@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -69,6 +70,8 @@ public class GameManager : MonoBehaviour
             healthText.text = "Health: " + health;
         }
         if (scene.name == "InShop") {
+            Canvas = GameObject.FindWithTag("Canvas");
+            dialoguePanel = GameObject.FindWithTag("DialogueBox");
             // GameManager.main.dialoguePanel = GameObject.Find("DialoguePanel");
             // GameManager.main.nameText = GameObject.Find("NameText").GetComponent<TextMeshProUGUI>();
             // GameManager.main.dialogueText = GameObject.Find("DialogueText").GetComponent<TextMeshProUGUI>();
@@ -157,8 +160,18 @@ public class GameManager : MonoBehaviour
 
 
     public void StartDialogue(String[] dialogue, int StartPosition, string name) {
+        dialoguePanel = GameObject.FindWithTag("DialogueBox");
+        dialoguePanel.transform.position = new Vector3(417, 100, 0);
+        TextMeshProUGUI[] texts = Canvas.GetComponentsInChildren<TextMeshProUGUI>();
+        foreach (TextMeshProUGUI text in texts) {
+            if (text.GameObject().CompareTag("Name")) {
+                nameText = text;
+            }
+            else if (text.GameObject().CompareTag("Dialogue")) {
+                dialogueText = text;
+            }
+        }
         nameText.text = name + "...";
-        dialoguePanel.SetActive(true);
         StopAllCoroutines();
         StartCoroutine(RunDialogue(dialogue, StartPosition));
     }
@@ -177,8 +190,8 @@ public class GameManager : MonoBehaviour
             skipLineTriggered = false;
         }
 
+        dialoguePanel.transform.position = new Vector3(0, 900000f, 0);
         OnDialogueEnded?.Invoke();
-        dialoguePanel.SetActive(false);
     }
 
     public void SkipLine(){
@@ -189,14 +202,16 @@ public class GameManager : MonoBehaviour
     {
         nameText.text = name + "...";
         StartCoroutine(TypeTextUncapped(dialogue));
-        dialoguePanel.SetActive(true);
+        
+        dialoguePanel.transform.position = new Vector3(417, 100, 0);
     }
 
     public void EndDialogue()
     {
+        
+        dialoguePanel.transform.position = new Vector3(0, 900000f, 0);
         nameText.text = null;
         dialogueText.text = null;
-        dialoguePanel.SetActive(false);
     }
 
     IEnumerator TypeTextUncapped(string text) {
