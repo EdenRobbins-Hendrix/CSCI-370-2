@@ -122,6 +122,10 @@ public class GameManager : MonoBehaviour
         StopAllCoroutines();
         spawning = true;
         healthText.text = "Health: " + health;
+        if (!dialogueText.IsUnityNull() && !nameText.IsUnityNull()){
+            DontDestroyOnLoad(dialogueText);
+            DontDestroyOnLoad(nameText);
+        }
         Debug.Log("I've been clicked");
         Initiate.Fade("TowerDefense", Color.black, 1.0f);
         Canvas = GameObject.FindWithTag("Respawn");
