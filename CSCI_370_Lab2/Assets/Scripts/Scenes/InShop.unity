@@ -6298,6 +6298,7 @@ MonoBehaviour:
   money: 20
   health: 100
   coffeeBeans: 20
+  currentwave: 1
   healthText: {fileID: 0}
   moneyText: {fileID: 272769679}
   beanText: {fileID: 56779835}
@@ -6833,7 +6834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
