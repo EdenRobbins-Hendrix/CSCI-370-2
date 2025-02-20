@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public int money = 20;
     public int health = 100;
     public int coffeeBeans = 25;
+    public int currentwave = 1;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI beanText;
