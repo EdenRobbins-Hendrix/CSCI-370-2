@@ -1097,10 +1097,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbca773dfc72a06469a64c95dac45627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseEnemies: 10
+  baseEnemies: 8
   enemiesPerSecond: 1
   timeBetweenWaves: 2.5
-  currentwave: 1
   timeSinceLastSpawn: 0
   enemiesAlive: 0
   enemiesLeftToSpawn: 0
@@ -5205,6 +5204,7 @@ MonoBehaviour:
   money: 20
   health: 100
   coffeeBeans: 25
+  currentwave: 1
   healthText: {fileID: 855684214}
   moneyText: {fileID: 1859536798}
   beanText: {fileID: 1461599588}
