@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
             healthText.text = "Health: " + health;
         }
         if (scene.name == "InShop") {
-            GameManager.main.dialoguePanel = GameObject.Find("DialoguePanel");
+            // GameManager.main.dialoguePanel = GameObject.Find("DialoguePanel");
             // GameManager.main.nameText = GameObject.Find("NameText").GetComponent<TextMeshProUGUI>();
             // GameManager.main.dialogueText = GameObject.Find("DialogueText").GetComponent<TextMeshProUGUI>();
             GameManager.main.moneyText = GameObject.Find("Money").GetComponent<TextMeshProUGUI>();
