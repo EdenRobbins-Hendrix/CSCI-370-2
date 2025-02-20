@@ -31,18 +31,54 @@ public class GameManager : MonoBehaviour
     public bool spawning = true;
 
     private void Awake() {
-        moneyText.text = "Money: " + money;
-        if (!healthText.IsUnityNull()){
-        healthText.text = "Health: " + health;}
-        beanText.text = "Beans: " + coffeeBeans;
-        if (main == null) {
-            main = this;
-            DontDestroyOnLoad(gameObject);
+    if (main == null) {
+        main = this;
+        DontDestroyOnLoad(gameObject);
         }
-        else {
-            Destroy(gameObject);
+    else {
+        Destroy(gameObject); 
+        }
+
+    if (healthText != null) {
+        healthText.text = "Health: " + health;
+        }
+    if (moneyText != null) {
+        moneyText.text = "Money: " + money;
+        }
+    if (beanText != null) {
+        beanText.text = "Beans: " + coffeeBeans;
         }
     }
+
+    void OnEnable() {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable() {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        if (scene.name == "TowerDefense") {
+            GameManager.main.healthText = GameObject.Find("TextHealth").GetComponent<TextMeshProUGUI>();
+            GameManager.main.moneyText = GameObject.Find("TextMoney").GetComponent<TextMeshProUGUI>();
+            GameManager.main.beanText = GameObject.Find("TextBeans").GetComponent<TextMeshProUGUI>();
+            GameManager.main.Canvas = GameObject.Find("Canvas");
+            beanText.text = "Beans: " + coffeeBeans;
+            moneyText.text = "Money: " + money;
+            healthText.text = "Health: " + health;
+        }
+        if (scene.name == "InShop") {
+            GameManager.main.dialoguePanel = GameObject.Find("DialoguePanel");
+            // GameManager.main.nameText = GameObject.Find("NameText").GetComponent<TextMeshProUGUI>();
+            // GameManager.main.dialogueText = GameObject.Find("DialogueText").GetComponent<TextMeshProUGUI>();
+            GameManager.main.moneyText = GameObject.Find("Money").GetComponent<TextMeshProUGUI>();
+            GameManager.main.beanText = GameObject.Find("Beans").GetComponent<TextMeshProUGUI>();
+            beanText.text = "Beans: " + coffeeBeans;
+            moneyText.text = "Money: " + money;
+        }
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
