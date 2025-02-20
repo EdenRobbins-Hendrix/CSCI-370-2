@@ -6,7 +6,7 @@ Narrative Structure: Protect villagers from oncoming zombies with your enchanted
 \
 Mechanics: Click on zombie path to place coffee beans, lose health when zombies reach the cafe, get money from zombies, buy more coffee beans, interact with villagers \
 \
-Aesthetics: Meant to feel kinda cozy, pixel art style for graphics \
+Aesthetics: Meant to feel kinda cozy in the cafe segments, kinda hectic (yet energetic) in the tower defense segments, pixel art style for graphics \
 \
 Joys: It was fun making custom assets, programming pathing for zombies, and incorporating pixelart using TileMaps. \
 \
