@@ -20,7 +20,7 @@ public class ZombieSpawner : MonoBehaviour {
     }
 
     [Header("WaveInfo")]
-    [SerializeField] private int currentwave = 1;
+    // [SerializeField] private int currentwave = 1;
     [SerializeField] private float timeSinceLastSpawn;
     [SerializeField] private int enemiesAlive;
     [SerializeField] private int enemiesLeftToSpawn;
@@ -60,7 +60,7 @@ public class ZombieSpawner : MonoBehaviour {
             GameManager.main.path[16] = GameObject.Find("Point (16)").transform;
             GameManager.main.path[17] = GameObject.Find("Point (17)").transform;
             GameManager.main.path[18] = GameObject.Find("EndPoint").transform;
-        if (currentwave == 1){
+        if (GameManager.main.currentwave == 1){
             Start();
         }
         }
@@ -79,11 +79,11 @@ public class ZombieSpawner : MonoBehaviour {
 
     public void GameOver(){
         GameManager.main.resetGame();
-        currentwave = 1;
+        GameManager.main.currentwave = 1;
     }
 
     private int EnemiesPerWave() {
-        return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentwave, 0.75f));
+        return Mathf.RoundToInt(baseEnemies * Mathf.Pow(GameManager.main.currentwave, 0.75f));
     }
 
     private void EnemyDestroyed() {
@@ -115,7 +115,7 @@ public class ZombieSpawner : MonoBehaviour {
     private void EndWave() {
         isSpawning = false;
         timeSinceLastSpawn = 0f;
-        currentwave++;
+        GameManager.main.currentwave++;
         if (GameManager.main.health > 0) {
             GameManager.main.changeSceneInShop();
         }
