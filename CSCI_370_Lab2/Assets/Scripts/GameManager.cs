@@ -99,6 +99,9 @@ public class GameManager : MonoBehaviour
 
     public void IncHealth (int dh){
         health -= dh;
+        GameObject light = GameObject.FindWithTag("Finish");
+        AudioSource audio = light.GetComponent<AudioSource>();
+        audio.Play();
         healthText = Canvas.transform.GetChild(2).GameObject().GetComponent<TextMeshProUGUI>();
         healthText.text = "Health: " + health;
     }
