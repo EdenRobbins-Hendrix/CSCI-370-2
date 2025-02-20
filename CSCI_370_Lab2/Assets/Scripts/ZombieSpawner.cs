@@ -60,7 +60,9 @@ public class ZombieSpawner : MonoBehaviour {
             GameManager.main.path[16] = GameObject.Find("Point (16)").transform;
             GameManager.main.path[17] = GameObject.Find("Point (17)").transform;
             GameManager.main.path[18] = GameObject.Find("EndPoint").transform;
+        if (currentwave == 1){
             Start();
+        }
         }
     }
 
