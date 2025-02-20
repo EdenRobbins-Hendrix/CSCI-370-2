@@ -133,7 +133,7 @@ public class GameManager : MonoBehaviour
 
     public void IncScore(int ds){
         money += ds;
-        moneyText = Canvas.transform.GetChild(0).GameObject().GetComponent<TextMeshProUGUI>();
+        // moneyText = Canvas.transform.GetChild(0).GameObject().GetComponent<TextMeshProUGUI>();
         moneyText.text = "Money: " + money;
     }
 
@@ -142,17 +142,19 @@ public class GameManager : MonoBehaviour
         GameObject light = GameObject.FindWithTag("Finish");
         AudioSource audio = light.GetComponent<AudioSource>();
         audio.Play();
-        healthText = Canvas.transform.GetChild(2).GameObject().GetComponent<TextMeshProUGUI>();
+        // healthText = Canvas.transform.GetChild(2).GameObject().GetComponent<TextMeshProUGUI>();
         healthText.text = "Health: " + health;
     }
 
     public void IncBeans (int db) {
         coffeeBeans += db;
-        beanText = Canvas.transform.GetChild(1).GameObject().GetComponent<TextMeshProUGUI>();
+
+        // beanText = Canvas.transform.GetChild(1).GameObject().GetComponent<TextMeshProUGUI>();
         if (!beanText.IsUnityNull()) {
             beanText.text = "Beans: " + coffeeBeans;
         }
     }
+
 
     public void StartDialogue(String[] dialogue, int StartPosition, string name) {
         nameText.text = name + "...";
