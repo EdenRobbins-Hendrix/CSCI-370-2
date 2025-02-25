@@ -162,7 +162,7 @@ public class GameManager : MonoBehaviour
 
     public void StartDialogue(String[] dialogue, int StartPosition, string name) {
         dialoguePanel = GameObject.FindWithTag("DialogueBox");
-        dialoguePanel.transform.position = new Vector3(417, 50, 0);
+        dialoguePanel.transform.position = new Vector3(420, 50, 0);
         TextMeshProUGUI[] texts = Canvas.GetComponentsInChildren<TextMeshProUGUI>();
         foreach (TextMeshProUGUI text in texts) {
             if (text.GameObject().CompareTag("Name")) {
@@ -204,7 +204,7 @@ public class GameManager : MonoBehaviour
         nameText.text = name + "...";
         StartCoroutine(TypeTextUncapped(dialogue));
         
-        dialoguePanel.transform.position = new Vector3(417, 50, 0);
+        dialoguePanel.transform.position = new Vector3(420, 50, 0);
     }
 
     public void EndDialogue()
