@@ -6392,7 +6392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 754495629}
   - component: {fileID: 754495628}
-  - component: {fileID: 754495627}
+  - component: {fileID: 754495633}
   - component: {fileID: 754495630}
   - component: {fileID: 754495631}
   - component: {fileID: 754495632}
@@ -6403,14 +6403,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &754495627
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754495626}
-  m_Enabled: 1
 --- !u!20 &754495628
 Camera:
   m_ObjectHideFlags: 0
@@ -6633,6 +6625,14 @@ MonoBehaviour:
   playerSprite: {fileID: 1287144254}
   boundaryPercent: 0.2
   easing: 0.25
+--- !u!81 &754495633
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754495626}
+  m_Enabled: 1
 --- !u!1 &773565723
 GameObject:
   m_ObjectHideFlags: 0
